@@ -156,7 +156,8 @@ def timetable(message):
 
 
 if __name__ == '__main__':
-    weather_report("青岛")
+    city_name = os.environ.get("CITY_NAME")
+    weather_report(city_name if city_name else "青岛")
     # timetable("第二教学楼十分钟后开始英语课")
 
     # schedule.every().day.at("18:30").do(weather_report, "南京")
